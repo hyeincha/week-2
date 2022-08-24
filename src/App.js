@@ -1,13 +1,8 @@
 import React from "react";
-import Header from "./components/header/Header";
-import Form from "./components/form/Form";
-import { useSelector } from "react-redux";
-import TodoList from "./components/pages/TodoList";
+import Router from "./shared/Router";
 
 const App = () => {
-  const todoStore = useSelector((state) => state);
-  console.log(todoStore);
-  return <TodoList />;
+  return <Router />;
 };
 
 export default App;

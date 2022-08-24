@@ -1,12 +1,11 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 import styled from "styled-components";
 import { addTodo } from "../../redux/modules/CURD";
 
 function Form() {
   const dispatch = useDispatch();
-  const todo = useSelector((state) => state.addtodo);
 
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
@@ -36,8 +35,8 @@ function Form() {
           value={body}
           onChange={(e) => setBody(e.target.value)}
         ></Input>
-        <Btn>추가하기</Btn>
       </Input_group>
+      <Btn>추가하기</Btn>
     </AddForm>
   );
 }
@@ -78,7 +77,7 @@ let Btn = styled.button`
   border: none;
   height: 40px;
   border-radius: 10px;
-  background-color: #3a96c4;
+  background-color: #77b4cc;
   width: 120px;
   color: #fff;
   font-weight: bold;

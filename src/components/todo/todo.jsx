@@ -1,14 +1,22 @@
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { deleteTodo, toggleTodo } from "../../redux/modules/CURD";
+import { deleteTodo, toggleTodo, readTodo } from "../../redux/modules/CURD";
 
 function Todo({ work }) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <Container>
       <div>
-        <Details>상세보기</Details>
+        <Details
+          onClick={() => {
+            navigate(`/${work.id}`);
+          }}
+        >
+          •••
+        </Details>
         <H2>{work.title}</H2>
         <div>{work.body}</div>
       </div>
@@ -26,9 +34,9 @@ export default Todo;
 
 let Container = styled.div`
   width: 200px;
-  border: 4px solid #c7e4ff;
   border-radius: 10px;
-  padding: 0px 24px 15px 24px;
+  padding: 0px 20px 15px 20px;
+  box-shadow: 7px 7px 15px #b1c7c9;
 `;
 
 let Btn = styled.button`
@@ -36,6 +44,9 @@ let Btn = styled.button`
   width: 50%;
   height: 30px;
   border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  background-color: #77b4cc;
   cursor: pointer;
 `;
 
@@ -46,9 +57,11 @@ let Btn_div = styled.div`
 `;
 
 let Details = styled.p`
-  font-size: 13px;
+  font-size: 15px;
   text-align: right;
-  margin: 15px 0px 0px 0px;
+  margin: 12px 0px 0px 0px;
+  color: #a9a9a9;
+  cursor: pointer;
 `;
 
 let H2 = styled.h2`
