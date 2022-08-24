@@ -9,7 +9,7 @@ function Details() {
   const dispatch = useDispatch();
   const todo = useSelector((state) => state.todolist.todo);
 
-  // 이부분 질문 필수 !!!!!
+  // TODO: 이부분 질문 필수 !!!!!
   const todoList = todo.find((todo) => {
     return todo.id === +id;
   });
