@@ -11,7 +11,7 @@ const Router = () => {
       }
     >
       <Routes>
-        <Route path="/" element={<TodoList />} />
+        <Route exact path="/" element={<TodoList />} />
         <Route path="/:id" element={<Details />} />
       </Routes>
     </BrowserRouter>
@@ -19,6 +19,3 @@ const Router = () => {
 };
 
 export default Router;
-
-// process.env.NODE_ENV === 'development'
-// process.env.NODE_ENV === 'production'

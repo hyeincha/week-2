@@ -20,7 +20,7 @@ function Form() {
 
   return (
     <AddForm onSubmit={onSubmitHandler}>
-      <Input_group>
+      <InputGroup>
         <Label>제목</Label>
         <Input
           type="text"
@@ -35,7 +35,7 @@ function Form() {
           value={body}
           onChange={(e) => setBody(e.target.value)}
         ></Input>
-      </Input_group>
+      </InputGroup>
       <Btn>추가하기</Btn>
     </AddForm>
   );
@@ -54,7 +54,7 @@ let AddForm = styled.form`
   gap: 20px;
 `;
 
-let Input_group = styled.div`
+let InputGroup = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
@@ -67,7 +67,7 @@ let Label = styled.label`
 
 let Input = styled.input`
   height: 40px;
-  width: 240px;
+  width: 220px;
   border: none;
   border-radius: 12px;
   padding: 0 12px;

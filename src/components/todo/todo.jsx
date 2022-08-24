@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { deleteTodo, toggleTodo, readTodo } from "../../redux/modules/CURD";
+import { deleteTodo, toggleTodo } from "../../redux/modules/CURD";
 
 function Todo({ work }) {
   const dispatch = useDispatch();
@@ -20,12 +20,12 @@ function Todo({ work }) {
         <H2>{work.title}</H2>
         <div>{work.body}</div>
       </div>
-      <Btn_div>
+      <BtnDiv>
         <Btn onClick={() => dispatch(toggleTodo(work.id))}>
           {work.isDone ? "취소" : "완료"}
         </Btn>
         <Btn onClick={() => dispatch(deleteTodo(work.id))}>삭제</Btn>
-      </Btn_div>
+      </BtnDiv>
     </Container>
   );
 }
@@ -50,7 +50,7 @@ let Btn = styled.button`
   cursor: pointer;
 `;
 
-let Btn_div = styled.div`
+let BtnDiv = styled.div`
   display: flex;
   gap: 10px;
   margin-top: 25px;

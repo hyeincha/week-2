@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 
 function Details() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const todo = useSelector((state) => state.todolist.todo);
 
   // TODO: 이부분 질문 필수 !!!!!
