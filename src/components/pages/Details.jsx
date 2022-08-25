@@ -7,10 +7,8 @@ function Details() {
   const navigate = useNavigate();
   const todo = useSelector((state) => state.todolist.todo);
 
-  // TODO: 이부분 질문 필수 !!!!!
-  const todoList = todo.find((todo) => {
-    return todo.id === +id;
-  });
+  // READ 기능 구현
+  const todoList = todo.find((todo) => todo.id === +id);
 
   return (
     <Wrapper>

@@ -5,11 +5,7 @@ import TodoList from "../components/pages/TodoList";
 
 const Router = () => {
   return (
-    <BrowserRouter
-      basename={
-        process.env.NODE_ENV === "production" ? process.env.PUBLIC_URL : "/"
-      }
-    >
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route exact path="/" element={<TodoList />} />
         <Route path="/:id" element={<Details />} />
