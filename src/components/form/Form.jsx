@@ -50,19 +50,20 @@ let AddForm = styled.form`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 25px;
   gap: 20px;
 `;
 
 let InputGroup = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 `;
 
 let Label = styled.label`
   font-size: 15px;
   font-weight: 700;
+  display: flex;
 `;
 
 let Input = styled.input`
