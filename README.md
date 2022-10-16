@@ -5,4 +5,4 @@
 CRUD가 가능한 간단한 투두리스트 앱입니다. <br>
 todo 우측 상단의 ...을 클릭하면 상세페이지를 볼 수 있습니다.
 
-배포 링크: https://hyeincha.github.io/todolist_redux/
+배포 링크: https://hyeincha.github.io/week-2/
